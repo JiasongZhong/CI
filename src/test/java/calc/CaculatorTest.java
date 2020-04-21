@@ -29,7 +29,7 @@ public class CaculatorTest {
 	public void testDiv() {
 		assertEquals(1, calc.div(2,2));
 	}
-	@Test(expected=java.lang.ArithmeticException.class)
+	@Test
 	public void testDivByZero() {
 		assertEquals(0, calc.div(3,0));
 	}
