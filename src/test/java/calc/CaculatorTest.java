@@ -13,67 +13,30 @@ public class CaculatorTest {
 	public static void setup(){
 		calc = new CalculatorMain();
 	}
-	
 	@Test
 	public void testAdd() {
-		int a=6;
-		int b=4;
-		int result=9;
-
-		Assert.assertEquals(result, calc.add(a, b));
+		assertEquals(5, calc.add(3,2));
 	}
-	
 	@Test
-	public void testAdd2() {
-		int a=1;
-		int b=3;
-		int result=4;
-
-		Assert.assertEquals(result, calc.add(a, b));
+	public void testSub() {
+		assertEquals(1, calc.sub(3,2));
 	}
-	
 	@Test
-	public void testAdd3() {
-		int a=1;
-		int b=3;
-		int result=4;
-
-		Assert.assertEquals(result, calc.add(a, b));
+	public void testMul() {
+		assertEquals(6, calc.mul(3,2));
 	}
-	
-	
-
-	
 	@Test
-	public void testSubtract() {
-		int a=16;
-		int b=4;
-		int result=12;
-		
-		Assert.assertEquals(result, calc.sub(a, b));
+	public void testDiv() {
+		assertEquals(1, calc.div(2,2));
 	}
-
-	@Test
-	public void testMultiply() {
-		int a=6;
-		int b=4;
-		int result=24;
-		
-		Assert.assertEquals(result, calc.mul(a, b));
+	@Test(expected=java.lang.ArithmeticException.class)
+	public void testDivByZero() {
+		assertEquals(0, calc.div(3,0));
 	}
-
-	@Test
-	public void testDivide() {
-		int a=16;
-		int b=2;
-		int result=8;
-		
-		Assert.assertEquals(result, calc.div(a, b));
-	}
-	
 	@Test
 	public void testPresedence() {
 		assertEquals(30, calc.add(calc.mul(5, 5), calc.div(10, 2)));
 	}
+
 	
 }
