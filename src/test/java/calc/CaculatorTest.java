@@ -18,7 +18,7 @@ public class CaculatorTest {
 	public void testAdd() {
 		int a=6;
 		int b=4;
-		int result=10;
+		int result=9;
 
 		Assert.assertEquals(result, calc.add(a, b));
 	}
