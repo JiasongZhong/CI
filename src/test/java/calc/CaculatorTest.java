@@ -71,4 +71,9 @@ public class CaculatorTest {
 		Assert.assertEquals(result, calc.div(a, b));
 	}
 	
+	@Test
+	public void testPresedence() {
+		assertEquals(30, calc.add(calc.mul(5, 5), calc.div(10, 2)));
+	}
+	
 }
