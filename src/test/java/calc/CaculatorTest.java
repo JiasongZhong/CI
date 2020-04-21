@@ -31,7 +31,7 @@ public class CaculatorTest {
 	}
 	@Test
 	public void testDivByZero() {
-		assertEquals(0, calc.div(2,0));
+		assertEquals(0, calc.div(3,0));
 	}
 	@Test
 	public void testPresedence() {
