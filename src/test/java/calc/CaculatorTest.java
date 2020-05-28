@@ -26,6 +26,11 @@ public class CaculatorTest {
 		assertEquals(6, calc.mul(3,2));
 	}
 	@Test
+	public void testMul1() {
+		assertEquals(6, calc.mul(3,2));
+	}
+	
+	@Test
 	public void testDiv() {
 		assertEquals(1, calc.div(2,2));
 	}
